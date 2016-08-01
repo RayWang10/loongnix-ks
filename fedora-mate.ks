@@ -467,13 +467,13 @@ Product=Fedora
 Version=21
 BugURL=your distribution provided bug reporting tool
 IsFinal=True
-UUID=201607261352.mips64
+UUID=201607300102.mips64
 [Compose]
 Lorax=19.6.28-1
 EOF
 
 # for java plugin
-ln -sf /usr/lib/jvm/java/jre/lib/mips64el/libnpjp2.so $INSTALL_ROOT/usr/lib64/mozilla/plugins/libnpjp2.so
+ln -sf /usr/lib/jvm/java/jre/lib/mips64/libnpjp2.so $INSTALL_ROOT/usr/lib64/mozilla/plugins/libnpjp2.so
 
 # install scripts
 cat > $INSTALL_ROOT/usr/sbin/system-installer << EOF
