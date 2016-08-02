@@ -52,6 +52,10 @@ repo --name=fedora --baseurl=http://ftp.loongnix.org/os/loongnix/1.0/os/
 # <notting> walters: because otherwise dependency loops cause yum issues.
 kernel
 
+# fcitx input method
+fcitx
+fcitx-table-chinese
+
 # The point of a live image is to install
 usermode
 anaconda
@@ -101,6 +105,9 @@ NetworkManager-pptp-gnome
 ######################
 -sox
 -autofs
+
+# remove ibus
+-ibus*
 
 # scanning takes quite a bit of space :/
 -xsane
@@ -471,6 +478,9 @@ UUID=201607300102.mips64
 [Compose]
 Lorax=19.6.28-1
 EOF
+
+# disable fcitx wbpy 
+sed -i s/Enabled=.*/Enabled=False/ $INSTALL_ROOT/usr/share/fcitx/table/wbpy.conf
 
 # for java plugin
 ln -sf /usr/lib/jvm/java/jre/lib/mips64/libnpjp2.so $INSTALL_ROOT/usr/lib64/mozilla/plugins/libnpjp2.so
