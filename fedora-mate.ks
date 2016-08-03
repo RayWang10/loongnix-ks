@@ -55,6 +55,7 @@ kernel
 # fcitx input method
 fcitx
 fcitx-table-chinese
+fcitx-configtool
 
 # The point of a live image is to install
 usermode
