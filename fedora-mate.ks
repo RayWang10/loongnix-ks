@@ -480,8 +480,9 @@ UUID=201607300102.mips64
 Lorax=19.6.28-1
 EOF
 
-# disable fcitx wbpy 
+# disable fcitx wbpy and auto display tray icon
 sed -i s/Enabled=.*/Enabled=False/ $INSTALL_ROOT/usr/share/fcitx/table/wbpy.conf
+sed -i s/DefaultValue=Hide.*/DefaultValue=Auto/ $INSTALL_ROOT/usr/share/fcitx/configdesc/fcitx-classic-ui.desc
 
 # for java plugin
 ln -sf /usr/lib/jvm/java/jre/lib/mips64/libnpjp2.so $INSTALL_ROOT/usr/lib64/mozilla/plugins/libnpjp2.so
