@@ -101,6 +101,10 @@ remmina-plugins-rdp
 NetworkManager-wifi
 NetworkManager-pptp-gnome
 
+# loongson
+loongson-themes
+loongson-fonts
+
 ######################
 # Remove
 ######################
@@ -473,9 +477,9 @@ cat > $INSTALL_ROOT/.buildstamp << EOF
 [Main]
 Product=Fedora
 Version=21
-BugURL=your distribution provided bug reporting tool
+BugURL=http://bugs.loongnix.org
 IsFinal=True
-UUID=201607300102.mips64
+UUID=$(date +"%Y%m%d%H%M").mips64
 [Compose]
 Lorax=19.6.28-1
 EOF
