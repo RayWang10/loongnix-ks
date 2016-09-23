@@ -549,9 +549,6 @@ Type=Application
 StartupNotify=true
 EOF
 
-# install adobe flash config file
-tar xf adobe.tar.gz -C $INSTALL_ROOT/etc/
-
 # remove youtube player
 rm -f $INSTALL_ROOT/usr/share/applications/smtube.desktop
 
